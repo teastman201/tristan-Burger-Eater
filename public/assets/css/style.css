@@ -1,0 +1,10 @@
+body {
+    color: #222222;
+    font-size: 1em;
+    font-family: "Open Sans", "Helvetica Neue", sans-serif;
+    background-color: burlywood;
+    margin: auto;
+  width: 60%;
+  
+  padding: 10px;
+}
