@@ -4,7 +4,11 @@ body {
     font-family: "Open Sans", "Helvetica Neue", sans-serif;
     background-color: burlywood;
     margin: auto;
-  width: 60%;
+    width: 60%;
   
   padding: 10px;
+}
+img {
+  width: 50%;
+  height: 50%;
 }
