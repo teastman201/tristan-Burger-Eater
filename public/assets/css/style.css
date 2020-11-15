@@ -9,6 +9,21 @@ body {
   padding: 10px;
 }
 img {
-  width: 50%;
-  height: 50%;
+  width: 30%;
+  height: 30%;
+  border-radius: 50%
+}
+
+.column {
+  flex: 50%;
+}
+
+.row {
+  display: flex;
+  
+}
+
+.list {
+
+font-size: 20px;
 }

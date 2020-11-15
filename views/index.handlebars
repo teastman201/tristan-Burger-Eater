@@ -1,29 +1,6 @@
-<h1>Eat Burgers!</h1>
-{{!-- Image not displaying --}}
-{{!-- <img src="https://images.app.goo.gl/KKZB2sPTVp8xRLHw7" alt="Beef Burger Clipart"> --}}
 <img src="/assets/img/burger.png" alt="Beef Burger Clipart">
 
-<h2>Not Yet Eaten Burgers!</h2>
-
-<ul>
-  {{#each burgers}}
-  {{#unless devoured}}
-  {{>burgers/burger-block devoured=true}}
-  {{/unless}}
-  {{/each}}
-</ul>
-
-<h2>Devoured Burgers!</h2>
-
-<ul>
-
-  {{#each burgers}}
-  {{#if devoured}}
-  {{!-- below indicates a partial --}}
-  {{>burgers/burger-block devoured=false}}
-  {{/if}}
-  {{/each}}
-</ul>
+<h1>Eat Burgers!</h1>
 
 <h2>Add a Burger</h2>
 <form class="create-form">
@@ -31,13 +8,30 @@
   <div class="form-group">
     <label for="eb">Burger Name:</label>
     <input type="text" id="eb" name="name">
+    <button type="submit">Add Burger</button>
   </div>
 
-  {{!-- <div class="form-group">
-    <label for="slee">Sleepy?</label><br>
-    <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
-    <input type="radio" name="sleepy" value="0"> Awake
-  </div> --}}
+  <div class="row">
+    <h2 class="column">Burgers to be Eaten!
+      <ul class="list">
+        {{#each burgers}}
+        {{#unless devoured}}
+        {{>burgers/burger-block devoured=true}}
+        {{/unless}}
+        {{/each}}
+      </ul>
+    </h2>
+    <h2 class="column">Devoured Burgers!
+      <ul class="list">
+        {{#each burgers}}
+        {{#if devoured}}
+        {{!-- below indicates a partial --}}
+        {{>burgers/burger-block devoured=false}}
+        {{/if}}
+        {{/each}}
+      </ul>
+    </h2>
+  </div>
 
-  <button type="submit">Add Burger</button>
+
 </form>
